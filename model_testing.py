@@ -10,7 +10,7 @@ def to_polynom(x, order = 1, add_bias = False):
     for i in order_range:
         out = np.append(out, np.power(x,i))
     return out.reshape(-1, x.size).T
-    model_name = 'model.sav'
+model_name = 'model.sav'
 path = 'test'
 test_data = []
 for path, dirs, files in os.walk(path):
