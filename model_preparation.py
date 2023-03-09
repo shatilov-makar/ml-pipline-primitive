@@ -10,7 +10,7 @@ def to_polynom(x, order = 1, add_bias = False):
     for i in order_range:
         out = np.append(out, np.power(x,i))
     return out.reshape(-1, x.size).T
-    path = 'train'
+path = 'train'
 train_data = []
 for path, dirs, files in os.walk(path):
     for filename in files:      
