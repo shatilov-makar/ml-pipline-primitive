@@ -12,7 +12,6 @@ def to_polynom(x, order = 1, add_bias = False):
     return out.reshape(-1, x.size).T
     model_name = 'model.sav'
 path = 'test'
-
 test_data = []
 for path, dirs, files in os.walk(path):
     for filename in files:      
