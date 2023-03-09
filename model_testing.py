@@ -16,12 +16,10 @@ test_data = []
 for path, dirs, files in os.walk(path):
     for filename in files:      
         test_data.append(pd.read_csv('{0}/{1}'.format(path,filename),index_col=0))
-
 test_data = pd.concat(test_data, axis = 0,ignore_index=True)
 X = np.array(test_data.Time).reshape(-1, 1)
 y = np.array(test_data.Temperature).reshape(-1, 1)
 x_pol = to_polynom(X, order = 3)
-
 loaded_model = pickle.load(open(model_name, 'rb'))
 result = loaded_model.score(x_pol, y)
 print(f"R2-score: {result}")
