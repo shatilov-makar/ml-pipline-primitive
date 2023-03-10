@@ -1,7 +1,13 @@
+import subprocess
+import sys
+
+subprocess.run(["pip", "install", '-r','requirements.txt'])
+
+from sklearn import datasets
 import numpy as np
 import pandas as pd
 import os
-from sklearn import datasets, linear_model
+
 
 print("Data_creation started")
 if (not os.path.exists("train")):
