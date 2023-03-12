@@ -15,7 +15,7 @@ if (not os.path.exists("train")):
     os.mkdir("train")
 
 if (not os.path.exists("test")):
-    print("Folder 'train' was created")
+    print("Folder 'test' was created")
     os.mkdir("test")
 
 print("Data is generating...")
